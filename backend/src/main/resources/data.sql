@@ -1,0 +1,12 @@
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Alfredo', '12345678-90', 200, '1994-07-20T10:30:00Z', 2);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Alex', '12345678-91', 500, '1994-07-20T10:30:00Z', 1);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Edmundo', '12345678-92', 300, '1994-07-20T10:30:00Z', 1);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Eduardo', '12345678-93', 340.40, '1994-07-20T10:30:00Z', 1);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Bruno', '12345678-94', 555, '1994-07-20T10:30:00Z', 0);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Carlos', '12345678-95', 234.11, '1994-07-20T10:30:00Z', 0);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Jeferson', '12345678-96', 332, '1994-07-20T10:30:00Z', 2);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Marcelo', '12345678-97', 111, '1994-07-20T10:30:00Z', 2);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Pedro', '12345678-98', 5000, '1994-07-20T10:30:00Z', 1);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Julio', '12345678-99', 1500, '1994-07-20T10:30:00Z', 3);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Rodrigo', '12345678-10', 2340.50, '1994-07-20T10:30:00Z', 4);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Rogerio', '12345678-11', 444, '1994-07-20T10:30:00Z', 1);
