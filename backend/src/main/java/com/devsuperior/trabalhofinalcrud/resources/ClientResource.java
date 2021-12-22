@@ -1,6 +1,5 @@
 package com.devsuperior.trabalhofinalcrud.resources;
 
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,16 +8,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.devsuperior.trabalhofinalcrud.entities.Client;
+import com.devsuperior.trabalhofinalcrud.dto.ClientDTO;
 
 @RestController
 @RequestMapping(value = "/clients")
 public class ClientResource {
 	
 	@GetMapping
-	public ResponseEntity<List<Client>> findAll() {
-		List<Client> list = new ArrayList<>();
-		list.add(new Client(1L, "Alfredo", "123456", 200.00, 2));
+	public ResponseEntity<List<ClientDTO>> findAll() {
+		List<ClientDTO> list = new ArrayList<>();
 		return ResponseEntity.ok().body(list);
 	}
 }

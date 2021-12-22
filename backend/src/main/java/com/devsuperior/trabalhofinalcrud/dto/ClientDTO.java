@@ -1,19 +1,15 @@
-package com.devsuperior.trabalhofinalcrud.entities;
+package com.devsuperior.trabalhofinalcrud.dto;
 
 import java.io.Serializable;
-import java.time.Instant;
-import java.util.Objects;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name="tb_client")
-public class Client implements Serializable{
-	private static final long serialVersionUID = 1L;
+import com.devsuperior.trabalhofinalcrud.entities.Client;
+
+public class ClientDTO implements Serializable{
+private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -22,18 +18,25 @@ public class Client implements Serializable{
 	private String name;
 	private String cpf;
 	private Double income;
-	private Instant birthDate;
+	//private Instant birthDate;
 	private Integer children;
 	
-	public Client() {
+	public ClientDTO() {
+	}
+	
+	public ClientDTO(Client entity) {
+		this.id = entity.getId();
+		this.name = entity.getName();
+		this.cpf = entity.getCpf();
+		this.income = entity.getIncome();
+		this.children = entity.getChildren();
 	}
 
-	public Client(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
+	public ClientDTO(Long id, String name, String cpf, Double income, Integer children) {
 		this.id = id;
 		this.name = name;
 		this.cpf = cpf;
 		this.income = income;
-		this.birthDate = birthDate;
 		this.children = children;
 	}
 
@@ -69,36 +72,11 @@ public class Client implements Serializable{
 		this.income = income;
 	}
 
-	public Instant getBirthDate() {
-		return birthDate;
-	}
-
-	public void setBirthDate(Instant birthDate) {
-		this.birthDate = birthDate;
-	}
-
 	public Integer getChildren() {
 		return children;
 	}
 
 	public void setChildren(Integer children) {
 		this.children = children;
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Client other = (Client) obj;
-		return Objects.equals(id, other.id);
 	}
 }
