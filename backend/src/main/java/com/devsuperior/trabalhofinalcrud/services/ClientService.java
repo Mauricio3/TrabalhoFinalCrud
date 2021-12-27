@@ -2,6 +2,8 @@ package com.devsuperior.trabalhofinalcrud.services;
 
 import java.util.Optional;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -50,7 +52,7 @@ public class ClientService {
 			copyDtoToEntity(entity, dto);
 			entity = repository.save(entity);
 			return new ClientDTO(entity);
-		} catch(ResourceNotFoundException e) {
+		} catch(EntityNotFoundException e) {
 			throw new ResourceNotFoundException("Id not foudnd:" + id);
 		}
  	}
